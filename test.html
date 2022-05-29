@@ -1,6 +1,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script>
-/**
+  <script>
+    /**
  * jQuery.query - Query String Modification and Creation for jQuery
  * Written by Blair Mitchelmore (blair DOT mitchelmore AT gmail DOT com)
  * Licensed under the WTFPL (http://sam.zoy.org/wtfpl/).
@@ -131,12 +131,10 @@ new function(settings) {
         return target;
       },
       SET: function(key, val) {
-        if(!key.includes("__proto__")){
-          var value = !is(val) ? null : val;
-          var parsed = parse(key), base = parsed[0], tokens = parsed[1];
-          var target = this.keys[base];
-          this.keys[base] = set(target, tokens.slice(0), value);
-        }
+        var value = !is(val) ? null : val;
+        var parsed = parse(key), base = parsed[0], tokens = parsed[1];
+        var target = this.keys[base];
+        this.keys[base] = set(target, tokens.slice(0), value);
         return this;
       },
       set: function(key, val) {
@@ -248,4 +246,4 @@ new function(settings) {
   };
 }(jQuery.query || {}); // Pass in jQuery.query as settings object
 
-</script>
+  </script>
